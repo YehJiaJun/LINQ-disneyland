@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 19.875" name="sqolcon">
+  <DataContextMoniker Name="/sqolconDataContext" />
+  <nestedChildShapes>
+    <classShape Id="eb12c8eb-6c2e-4a4c-989c-9040f79a661f" absoluteBounds="1, 14.75, 2, 2.2764815266927076">
+      <DataClassMoniker Name="/sqolconDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c33ab75-19f6-42f9-aa13-ed2fa81d5ce3" absoluteBounds="1.0150000000000001, 15.21, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c72605cb-4a63-4597-ac67-fccdc9657102" absoluteBounds="3.5, 3, 2, 3.2004520670572916">
+      <DataClassMoniker Name="/sqolconDataContext/Attractions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e3984385-0d6b-46be-9273-05b9eceaf0fb" absoluteBounds="3.515, 3.46, 1.9700000000000002, 2.6404520670572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee645bb2-87f2-4705-9d2f-cfb4717526de" absoluteBounds="6.25, 7.375, 2, 1.9068933105468746">
+      <DataClassMoniker Name="/sqolconDataContext/BusinessSchedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1552605c-56ac-42a2-b110-06f9cfa8b2c3" absoluteBounds="6.265, 7.835, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d10c9463-629d-45d5-9e6b-10c476bc2fa6" absoluteBounds="1.75, 18.25, 2, 1.3525109863281273">
+      <DataClassMoniker Name="/sqolconDataContext/Group" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f1776cdb-eec5-4b5d-90cd-03fe5c69ebf3" absoluteBounds="1.7650000000000001, 18.71, 1.9700000000000002, 0.792510986328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b8b954f-5ba7-4b0e-af0e-0113847936b2" absoluteBounds="6.25, 2.375, 2, 1.7220992024739577">
+      <DataClassMoniker Name="/sqolconDataContext/MaintenanceSchedule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5380fba3-ad1c-4441-8a6e-85051da9df8b" absoluteBounds="6.265, 2.835, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed35c894-0959-40a8-8b53-aeda9a9c7729" absoluteBounds="8.75, 0.75, 2, 1.7220992024739579">
+      <DataClassMoniker Name="/sqolconDataContext/Newtext" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2c651b52-a8fd-4717-b6c3-a635da88a56e" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dc0de1ac-816b-47d6-aae5-3144e22d8caf" absoluteBounds="3.75, 13.625, 2, 2.2764815266927094">
+      <DataClassMoniker Name="/sqolconDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a25402ab-719c-447d-a6ab-9df762266762" absoluteBounds="3.765, 14.085, 1.9700000000000002, 1.7164815266927085" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1c5fe424-391c-4ed9-bcd1-d1a08058767a" absoluteBounds="6.5, 12.625, 2, 1.9068933105468737">
+      <DataClassMoniker Name="/sqolconDataContext/OrderDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d739e01-2357-4948-8caa-d93ee7966fea" absoluteBounds="6.515, 13.085, 1.9700000000000002, 1.346893310546875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e3d7535-f6d6-4e94-bd60-eeda3db53cc0" absoluteBounds="1, 12.5, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/sqolconDataContext/PaymentMethod" />
+      <nestedChildShapes>
+        <elementListCompartment Id="26ebb4d4-5c80-4412-a9da-9441b395e4e1" absoluteBounds="1.0150000000000001, 12.96, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="01c82098-93a3-4bee-a299-f7fc14328621" absoluteBounds="9.25, 3.75, 2, 1.7220992024739577">
+      <DataClassMoniker Name="/sqolconDataContext/QueueOfAttractions" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1cc421c2-ca60-4f8c-ac91-11e1107f3a57" absoluteBounds="9.265, 4.21, 1.9700000000000002, 1.1620992024739583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c6d681a-1138-40ee-b70e-08c8d6adfd67" absoluteBounds="0.75, 3.875, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/sqolconDataContext/ThemePark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25e8843b-c051-4706-a2b7-bb37f08d0d60" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0d41b00-9e2a-4a10-b9a4-ad050a99e8ed" absoluteBounds="3.75, 10.125, 2, 1.5373050944010416">
+      <DataClassMoniker Name="/sqolconDataContext/TicketOffers" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02870b61-cc26-49a0-899c-e195460c3c27" absoluteBounds="3.765, 10.585, 1.9700000000000002, 0.97730509440104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 6.20045206705729); (4.5 : 8.32844665527344); (6.25 : 8.32844665527344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/Attractions/Attractions_BusinessSchedule" />
+      <nodes>
+        <classShapeMoniker Id="c72605cb-4a63-4597-ac67-fccdc9657102" />
+        <classShapeMoniker Id="ee645bb2-87f2-4705-9d2f-cfb4717526de" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.375 : 18.25); (2.375 : 17.0264815266927)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/Group/Group_Account" />
+      <nodes>
+        <classShapeMoniker Id="d10c9463-629d-45d5-9e6b-10c476bc2fa6" />
+        <classShapeMoniker Id="eb12c8eb-6c2e-4a4c-989c-9040f79a661f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.54854960123698); (6.25 : 3.54854960123698)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/Attractions/Attractions_MaintenanceSchedule" />
+      <nodes>
+        <classShapeMoniker Id="c72605cb-4a63-4597-ac67-fccdc9657102" />
+        <classShapeMoniker Id="7b8b954f-5ba7-4b0e-af0e-0113847936b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 15.3257407633464); (3.75 : 15.3257407633464)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/Account/Account_Order" />
+      <nodes>
+        <classShapeMoniker Id="eb12c8eb-6c2e-4a4c-989c-9040f79a661f" />
+        <classShapeMoniker Id="dc0de1ac-816b-47d6-aae5-3144e22d8caf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 14.0784466552734); (6.5 : 14.0784466552734)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/Order/Order_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="dc0de1ac-816b-47d6-aae5-3144e22d8caf" />
+        <classShapeMoniker Id="1c5fe424-391c-4ed9-bcd1-d1a08058767a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 13.8311525472005); (3.75 : 13.8311525472005)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/PaymentMethod/PaymentMethod_Order" />
+      <nodes>
+        <classShapeMoniker Id="9e3d7535-f6d6-4e94-bd60-eeda3db53cc0" />
+        <classShapeMoniker Id="dc0de1ac-816b-47d6-aae5-3144e22d8caf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.81584920247396); (9.25 : 4.81584920247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/Attractions/Attractions_QueueOfAttractions" />
+      <nodes>
+        <classShapeMoniker Id="c72605cb-4a63-4597-ac67-fccdc9657102" />
+        <classShapeMoniker Id="01c82098-93a3-4bee-a299-f7fc14328621" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.40625 : 12.625); (8.40625 : 5.17522670247396); (9.25 : 5.17522670247396)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/OrderDetail/OrderDetail_QueueOfAttractions" />
+      <nodes>
+        <classShapeMoniker Id="1c5fe424-391c-4ed9-bcd1-d1a08058767a" />
+        <classShapeMoniker Id="01c82098-93a3-4bee-a299-f7fc14328621" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.64365254720052); (3.5 : 4.64365254720052)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/ThemePark/ThemePark_Attractions" />
+      <nodes>
+        <classShapeMoniker Id="4c6d681a-1138-40ee-b70e-08c8d6adfd67" />
+        <classShapeMoniker Id="c72605cb-4a63-4597-ac67-fccdc9657102" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 10.8936525472005); (7.4218725 : 10.8936525472005); (7.4218725 : 12.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/sqolconDataContext/TicketOffers/TicketOffers_OrderDetail" />
+      <nodes>
+        <classShapeMoniker Id="f0d41b00-9e2a-4a10-b9a4-ad050a99e8ed" />
+        <classShapeMoniker Id="1c5fe424-391c-4ed9-bcd1-d1a08058767a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
