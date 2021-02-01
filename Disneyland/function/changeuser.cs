@@ -40,11 +40,11 @@ namespace Disneyland.function
             methon.variable va = new methon.variable();
             id = va.Accid;
             txtBirthday.MaxDate = DateTime.Today;
-            email = txtemail.Text;
             var select = db.Account.FirstOrDefault(x => x.AccountID == id);
             txtBirthday.Value = select.Birthday.Value;
             txtcity.Text = select.Citizenship;
             txtemail.Text = select.Email;
+            email = txtemail.Text;
             txtname.Text = select.Name;
             txtpass.Text = select.Password;
             txtsex.Text = select.Gender.ToString();
@@ -66,9 +66,6 @@ namespace Disneyland.function
                     return;
                 }
             }
-            else
-            {
-                
                 var update = from a in db.Account where a.AccountID == id select a;
                 foreach(var i in update)
                 {
@@ -80,7 +77,6 @@ namespace Disneyland.function
                     i.Citizenship = txtcity.Text.Replace("'", "''");
                 }
                 db.SubmitChanges();
-            }
             MessageBox.Show("保存完成");
         }
     }

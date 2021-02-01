@@ -14,6 +14,15 @@
       <Association Name="Group_Account" Member="Group" ThisKey="GroupID" OtherKey="GroupID" Type="Group" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TicketOffers" Member="TicketOffers">
+    <Type Name="TicketOffers">
+      <Column Name="TicketOffersID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TicketName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TicketPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="TicketOffers_OrderDetail" Member="OrderDetail" ThisKey="TicketOffersID" OtherKey="TicketOffersID" Type="OrderDetail" />
+    </Type>
+  </Table>
   <Table Name="dbo.Attractions" Member="Attractions">
     <Type Name="Attractions">
       <Column Name="AttractionsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -66,10 +75,19 @@
   </Table>
   <Table Name="dbo.Newtext" Member="Newtext">
     <Type Name="Newtext">
-      <Column Name="Newid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Newid" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Newtxt1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Newtxt2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Newtxt3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewPic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Newtraffic" Member="Newtraffic">
+    <Type Name="Newtraffic">
+      <Column Name="Newid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Newtext1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Newtext2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Newtext3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="NewPic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
@@ -128,15 +146,6 @@
       <Column Name="Introduction" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
       <Column Name="NewPic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Association Name="ThemePark_Attractions" Member="Attractions" ThisKey="ThemeParkID" OtherKey="ThemeParkID" Type="Attractions" />
-    </Type>
-  </Table>
-  <Table Name="dbo.TicketOffers" Member="TicketOffers">
-    <Type Name="TicketOffers">
-      <Column Name="TicketOffersID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TicketName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="TicketPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Association Name="TicketOffers_OrderDetail" Member="OrderDetail" ThisKey="TicketOffersID" OtherKey="TicketOffersID" Type="OrderDetail" />
     </Type>
   </Table>
 </Database>

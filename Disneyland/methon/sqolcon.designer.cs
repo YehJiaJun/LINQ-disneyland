@@ -33,6 +33,9 @@ namespace Disneyland.methon
     partial void InsertAccount(Account instance);
     partial void UpdateAccount(Account instance);
     partial void DeleteAccount(Account instance);
+    partial void InsertTicketOffers(TicketOffers instance);
+    partial void UpdateTicketOffers(TicketOffers instance);
+    partial void DeleteTicketOffers(TicketOffers instance);
     partial void InsertAttractions(Attractions instance);
     partial void UpdateAttractions(Attractions instance);
     partial void DeleteAttractions(Attractions instance);
@@ -45,6 +48,9 @@ namespace Disneyland.methon
     partial void InsertMaintenanceSchedule(MaintenanceSchedule instance);
     partial void UpdateMaintenanceSchedule(MaintenanceSchedule instance);
     partial void DeleteMaintenanceSchedule(MaintenanceSchedule instance);
+    partial void InsertNewtext(Newtext instance);
+    partial void UpdateNewtext(Newtext instance);
+    partial void DeleteNewtext(Newtext instance);
     partial void InsertOrder(Order instance);
     partial void UpdateOrder(Order instance);
     partial void DeleteOrder(Order instance);
@@ -60,9 +66,6 @@ namespace Disneyland.methon
     partial void InsertThemePark(ThemePark instance);
     partial void UpdateThemePark(ThemePark instance);
     partial void DeleteThemePark(ThemePark instance);
-    partial void InsertTicketOffers(TicketOffers instance);
-    partial void UpdateTicketOffers(TicketOffers instance);
-    partial void DeleteTicketOffers(TicketOffers instance);
     #endregion
 		
 		public sqolconDataContext() : 
@@ -100,6 +103,14 @@ namespace Disneyland.methon
 			get
 			{
 				return this.GetTable<Account>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TicketOffers> TicketOffers
+		{
+			get
+			{
+				return this.GetTable<TicketOffers>();
 			}
 		}
 		
@@ -143,6 +154,14 @@ namespace Disneyland.methon
 			}
 		}
 		
+		public System.Data.Linq.Table<Newtraffic> Newtraffic
+		{
+			get
+			{
+				return this.GetTable<Newtraffic>();
+			}
+		}
+		
 		public System.Data.Linq.Table<Order> Order
 		{
 			get
@@ -180,14 +199,6 @@ namespace Disneyland.methon
 			get
 			{
 				return this.GetTable<ThemePark>();
-			}
-		}
-		
-		public System.Data.Linq.Table<TicketOffers> TicketOffers
-		{
-			get
-			{
-				return this.GetTable<TicketOffers>();
 			}
 		}
 	}
@@ -488,6 +499,168 @@ namespace Disneyland.methon
 		{
 			this.SendPropertyChanging();
 			entity.Account = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TicketOffers")]
+	public partial class TicketOffers : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _TicketOffersID;
+		
+		private string _TicketName;
+		
+		private System.Nullable<int> _TicketPrice;
+		
+		private System.Nullable<double> _Discount;
+		
+		private EntitySet<OrderDetail> _OrderDetail;
+		
+    #region 擴充性方法定義
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTicketOffersIDChanging(int value);
+    partial void OnTicketOffersIDChanged();
+    partial void OnTicketNameChanging(string value);
+    partial void OnTicketNameChanged();
+    partial void OnTicketPriceChanging(System.Nullable<int> value);
+    partial void OnTicketPriceChanged();
+    partial void OnDiscountChanging(System.Nullable<double> value);
+    partial void OnDiscountChanged();
+    #endregion
+		
+		public TicketOffers()
+		{
+			this._OrderDetail = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetail), new Action<OrderDetail>(this.detach_OrderDetail));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketOffersID", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int TicketOffersID
+		{
+			get
+			{
+				return this._TicketOffersID;
+			}
+			set
+			{
+				if ((this._TicketOffersID != value))
+				{
+					this.OnTicketOffersIDChanging(value);
+					this.SendPropertyChanging();
+					this._TicketOffersID = value;
+					this.SendPropertyChanged("TicketOffersID");
+					this.OnTicketOffersIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketName", DbType="NVarChar(50)")]
+		public string TicketName
+		{
+			get
+			{
+				return this._TicketName;
+			}
+			set
+			{
+				if ((this._TicketName != value))
+				{
+					this.OnTicketNameChanging(value);
+					this.SendPropertyChanging();
+					this._TicketName = value;
+					this.SendPropertyChanged("TicketName");
+					this.OnTicketNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketPrice", DbType="Int")]
+		public System.Nullable<int> TicketPrice
+		{
+			get
+			{
+				return this._TicketPrice;
+			}
+			set
+			{
+				if ((this._TicketPrice != value))
+				{
+					this.OnTicketPriceChanging(value);
+					this.SendPropertyChanging();
+					this._TicketPrice = value;
+					this.SendPropertyChanged("TicketPrice");
+					this.OnTicketPriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discount", DbType="Float")]
+		public System.Nullable<double> Discount
+		{
+			get
+			{
+				return this._Discount;
+			}
+			set
+			{
+				if ((this._Discount != value))
+				{
+					this.OnDiscountChanging(value);
+					this.SendPropertyChanging();
+					this._Discount = value;
+					this.SendPropertyChanged("Discount");
+					this.OnDiscountChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TicketOffers_OrderDetail", Storage="_OrderDetail", ThisKey="TicketOffersID", OtherKey="TicketOffersID")]
+		public EntitySet<OrderDetail> OrderDetail
+		{
+			get
+			{
+				return this._OrderDetail;
+			}
+			set
+			{
+				this._OrderDetail.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_OrderDetail(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.TicketOffers = this;
+		}
+		
+		private void detach_OrderDetail(OrderDetail entity)
+		{
+			this.SendPropertyChanging();
+			entity.TicketOffers = null;
 		}
 	}
 	
@@ -1527,8 +1700,10 @@ namespace Disneyland.methon
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Newtext")]
-	public partial class Newtext
+	public partial class Newtext : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private int _Newid;
 		
@@ -1540,7 +1715,163 @@ namespace Disneyland.methon
 		
 		private string _NewPic;
 		
+    #region 擴充性方法定義
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnNewidChanging(int value);
+    partial void OnNewidChanged();
+    partial void OnNewtxt1Changing(string value);
+    partial void OnNewtxt1Changed();
+    partial void OnNewtxt2Changing(string value);
+    partial void OnNewtxt2Changed();
+    partial void OnNewtxt3Changing(string value);
+    partial void OnNewtxt3Changed();
+    partial void OnNewPicChanging(string value);
+    partial void OnNewPicChanged();
+    #endregion
+		
 		public Newtext()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newid", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Newid
+		{
+			get
+			{
+				return this._Newid;
+			}
+			set
+			{
+				if ((this._Newid != value))
+				{
+					this.OnNewidChanging(value);
+					this.SendPropertyChanging();
+					this._Newid = value;
+					this.SendPropertyChanged("Newid");
+					this.OnNewidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtxt1", DbType="NVarChar(MAX)")]
+		public string Newtxt1
+		{
+			get
+			{
+				return this._Newtxt1;
+			}
+			set
+			{
+				if ((this._Newtxt1 != value))
+				{
+					this.OnNewtxt1Changing(value);
+					this.SendPropertyChanging();
+					this._Newtxt1 = value;
+					this.SendPropertyChanged("Newtxt1");
+					this.OnNewtxt1Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtxt2", DbType="NVarChar(MAX)")]
+		public string Newtxt2
+		{
+			get
+			{
+				return this._Newtxt2;
+			}
+			set
+			{
+				if ((this._Newtxt2 != value))
+				{
+					this.OnNewtxt2Changing(value);
+					this.SendPropertyChanging();
+					this._Newtxt2 = value;
+					this.SendPropertyChanged("Newtxt2");
+					this.OnNewtxt2Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtxt3", DbType="NVarChar(MAX)")]
+		public string Newtxt3
+		{
+			get
+			{
+				return this._Newtxt3;
+			}
+			set
+			{
+				if ((this._Newtxt3 != value))
+				{
+					this.OnNewtxt3Changing(value);
+					this.SendPropertyChanging();
+					this._Newtxt3 = value;
+					this.SendPropertyChanged("Newtxt3");
+					this.OnNewtxt3Changed();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewPic", DbType="NVarChar(MAX)")]
+		public string NewPic
+		{
+			get
+			{
+				return this._NewPic;
+			}
+			set
+			{
+				if ((this._NewPic != value))
+				{
+					this.OnNewPicChanging(value);
+					this.SendPropertyChanging();
+					this._NewPic = value;
+					this.SendPropertyChanged("NewPic");
+					this.OnNewPicChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Newtraffic")]
+	public partial class Newtraffic
+	{
+		
+		private int _Newid;
+		
+		private string _Newtext1;
+		
+		private string _Newtext2;
+		
+		private string _Newtext3;
+		
+		private string _NewPic;
+		
+		public Newtraffic()
 		{
 		}
 		
@@ -1560,50 +1891,50 @@ namespace Disneyland.methon
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtxt1", DbType="NVarChar(MAX)")]
-		public string Newtxt1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtext1", DbType="NVarChar(50)")]
+		public string Newtext1
 		{
 			get
 			{
-				return this._Newtxt1;
+				return this._Newtext1;
 			}
 			set
 			{
-				if ((this._Newtxt1 != value))
+				if ((this._Newtext1 != value))
 				{
-					this._Newtxt1 = value;
+					this._Newtext1 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtxt2", DbType="NVarChar(MAX)")]
-		public string Newtxt2
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtext2", DbType="NVarChar(MAX)")]
+		public string Newtext2
 		{
 			get
 			{
-				return this._Newtxt2;
+				return this._Newtext2;
 			}
 			set
 			{
-				if ((this._Newtxt2 != value))
+				if ((this._Newtext2 != value))
 				{
-					this._Newtxt2 = value;
+					this._Newtext2 = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtxt3", DbType="NVarChar(MAX)")]
-		public string Newtxt3
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Newtext3", DbType="NVarChar(MAX)")]
+		public string Newtext3
 		{
 			get
 			{
-				return this._Newtxt3;
+				return this._Newtext3;
 			}
 			set
 			{
-				if ((this._Newtxt3 != value))
+				if ((this._Newtext3 != value))
 				{
-					this._Newtxt3 = value;
+					this._Newtext3 = value;
 				}
 			}
 		}
@@ -2818,168 +3149,6 @@ namespace Disneyland.methon
 		{
 			this.SendPropertyChanging();
 			entity.ThemePark = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TicketOffers")]
-	public partial class TicketOffers : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _TicketOffersID;
-		
-		private string _TicketName;
-		
-		private System.Nullable<int> _TicketPrice;
-		
-		private System.Nullable<double> _Discount;
-		
-		private EntitySet<OrderDetail> _OrderDetail;
-		
-    #region 擴充性方法定義
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnTicketOffersIDChanging(int value);
-    partial void OnTicketOffersIDChanged();
-    partial void OnTicketNameChanging(string value);
-    partial void OnTicketNameChanged();
-    partial void OnTicketPriceChanging(System.Nullable<int> value);
-    partial void OnTicketPriceChanged();
-    partial void OnDiscountChanging(System.Nullable<double> value);
-    partial void OnDiscountChanged();
-    #endregion
-		
-		public TicketOffers()
-		{
-			this._OrderDetail = new EntitySet<OrderDetail>(new Action<OrderDetail>(this.attach_OrderDetail), new Action<OrderDetail>(this.detach_OrderDetail));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketOffersID", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int TicketOffersID
-		{
-			get
-			{
-				return this._TicketOffersID;
-			}
-			set
-			{
-				if ((this._TicketOffersID != value))
-				{
-					this.OnTicketOffersIDChanging(value);
-					this.SendPropertyChanging();
-					this._TicketOffersID = value;
-					this.SendPropertyChanged("TicketOffersID");
-					this.OnTicketOffersIDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketName", DbType="NVarChar(50)")]
-		public string TicketName
-		{
-			get
-			{
-				return this._TicketName;
-			}
-			set
-			{
-				if ((this._TicketName != value))
-				{
-					this.OnTicketNameChanging(value);
-					this.SendPropertyChanging();
-					this._TicketName = value;
-					this.SendPropertyChanged("TicketName");
-					this.OnTicketNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TicketPrice", DbType="Int")]
-		public System.Nullable<int> TicketPrice
-		{
-			get
-			{
-				return this._TicketPrice;
-			}
-			set
-			{
-				if ((this._TicketPrice != value))
-				{
-					this.OnTicketPriceChanging(value);
-					this.SendPropertyChanging();
-					this._TicketPrice = value;
-					this.SendPropertyChanged("TicketPrice");
-					this.OnTicketPriceChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Discount", DbType="Float")]
-		public System.Nullable<double> Discount
-		{
-			get
-			{
-				return this._Discount;
-			}
-			set
-			{
-				if ((this._Discount != value))
-				{
-					this.OnDiscountChanging(value);
-					this.SendPropertyChanging();
-					this._Discount = value;
-					this.SendPropertyChanged("Discount");
-					this.OnDiscountChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TicketOffers_OrderDetail", Storage="_OrderDetail", ThisKey="TicketOffersID", OtherKey="TicketOffersID")]
-		public EntitySet<OrderDetail> OrderDetail
-		{
-			get
-			{
-				return this._OrderDetail;
-			}
-			set
-			{
-				this._OrderDetail.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_OrderDetail(OrderDetail entity)
-		{
-			this.SendPropertyChanging();
-			entity.TicketOffers = this;
-		}
-		
-		private void detach_OrderDetail(OrderDetail entity)
-		{
-			this.SendPropertyChanging();
-			entity.TicketOffers = null;
 		}
 	}
 }

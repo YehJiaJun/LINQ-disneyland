@@ -53,6 +53,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="function\traffic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="function\traffic.Designer.cs">
+      <DependentUpon>traffic.cs</DependentUpon>
+    </Compile>
     <Compile Include="function\changeuser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="function\traffic.resx">
+      <DependentUpon>traffic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="function\changeuser.resx">
       <DependentUpon>changeuser.cs</DependentUpon>

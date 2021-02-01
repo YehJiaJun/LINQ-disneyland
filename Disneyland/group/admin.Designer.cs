@@ -45,6 +45,7 @@ namespace Disneyland.group
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pl = new System.Windows.Forms.Panel();
+            this.traffic1 = new Disneyland.function.traffic();
             this.themePark1 = new Disneyland.function.ThemePark();
             this.changeuser1 = new Disneyland.function.changeuser();
             this.color1 = new Disneyland.function.color();
@@ -178,6 +179,7 @@ namespace Disneyland.group
             this.button3.TabIndex = 3;
             this.button3.Text = "TicketOffers";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -188,6 +190,7 @@ namespace Disneyland.group
             this.button2.TabIndex = 2;
             this.button2.Text = "交通方式";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -213,6 +216,7 @@ namespace Disneyland.group
             // 
             // pl
             // 
+            this.pl.Controls.Add(this.traffic1);
             this.pl.Controls.Add(this.themePark1);
             this.pl.Controls.Add(this.changeuser1);
             this.pl.Controls.Add(this.color1);
@@ -220,6 +224,15 @@ namespace Disneyland.group
             this.pl.Name = "pl";
             this.pl.Size = new System.Drawing.Size(1067, 766);
             this.pl.TabIndex = 1;
+            // 
+            // traffic1
+            // 
+            this.traffic1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.traffic1.Location = new System.Drawing.Point(0, -1);
+            this.traffic1.Margin = new System.Windows.Forms.Padding(5);
+            this.traffic1.Name = "traffic1";
+            this.traffic1.Size = new System.Drawing.Size(1067, 766);
+            this.traffic1.TabIndex = 3;
             // 
             // themePark1
             // 
@@ -286,5 +299,6 @@ namespace Disneyland.group
         private function.color color1;
         private function.changeuser changeuser1;
         private function.ThemePark themePark1;
+        private function.traffic traffic1;
     }
 }
