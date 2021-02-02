@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +53,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="function\ticketoffers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="function\ticketoffers.Designer.cs">
+      <DependentUpon>ticketoffers.cs</DependentUpon>
     </Compile>
     <Compile Include="function\traffic.cs">
       <SubType>UserControl</SubType>
@@ -105,6 +112,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="function\ticketoffers.resx">
+      <DependentUpon>ticketoffers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="function\traffic.resx">
       <DependentUpon>traffic.cs</DependentUpon>

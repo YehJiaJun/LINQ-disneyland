@@ -49,6 +49,7 @@ namespace Disneyland.group
             this.themePark1 = new Disneyland.function.ThemePark();
             this.changeuser1 = new Disneyland.function.changeuser();
             this.color1 = new Disneyland.function.color();
+            this.ticketoffers1 = new Disneyland.function.ticketoffers();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pl.SuspendLayout();
@@ -216,6 +217,7 @@ namespace Disneyland.group
             // 
             // pl
             // 
+            this.pl.Controls.Add(this.ticketoffers1);
             this.pl.Controls.Add(this.traffic1);
             this.pl.Controls.Add(this.themePark1);
             this.pl.Controls.Add(this.changeuser1);
@@ -260,6 +262,15 @@ namespace Disneyland.group
             this.color1.Size = new System.Drawing.Size(1067, 766);
             this.color1.TabIndex = 0;
             // 
+            // ticketoffers1
+            // 
+            this.ticketoffers1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.ticketoffers1.Location = new System.Drawing.Point(0, -1);
+            this.ticketoffers1.Margin = new System.Windows.Forms.Padding(5);
+            this.ticketoffers1.Name = "ticketoffers1";
+            this.ticketoffers1.Size = new System.Drawing.Size(1067, 766);
+            this.ticketoffers1.TabIndex = 4;
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -300,5 +311,6 @@ namespace Disneyland.group
         private function.changeuser changeuser1;
         private function.ThemePark themePark1;
         private function.traffic traffic1;
+        private function.ticketoffers ticketoffers1;
     }
 }
